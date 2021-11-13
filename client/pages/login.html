@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <link rel="icon" href="./components/dorayaki.ico">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login | Mahi Mahi</title>
+
+    <link rel="stylesheet" href="../style/index.css"></link>
+    <link rel="stylesheet" href="../style/login.css"></link>
+
+    <script src='../script/helper.js' defer></script>
+    <script src='../script/index.js' defer></script>
+    
+</head>
+<body>
+    <div class="background"></div>
+    <div class="container-box containerLogin">
+        <h1> Login </h1>
+        <form action="../../server/login.php" method="post" id="formLogin" name="formLogin">
+            <label for="labelUsername">Username : </label><br>
+            <input type="text" id="inputUsername" name="inputUsername"><br>
+            <label for="labelPassword">Password : </label><br>
+            <input type="password" id="inputPassword" name="inputPassword"><br>
+            <input type="submit" class="submitButton" name="submit" value="Login">
+        </form>
+        <a href='register.html'><button>Register</button></a>
+    </div>
+</body>
+</html>

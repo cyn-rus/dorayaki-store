@@ -1,0 +1,80 @@
+.stock-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stock-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.stock-detail {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.stock-img #stockImg {
+    height: 12rem;
+    width: auto;
+}
+
+.stock-desc {
+    padding-left: 2rem;
+}
+
+.change-stock-text {
+    display: flex;
+    justify-content: center;
+}
+
+.change-stock-detail {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 2rem;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1rem;
+}
+
+.reduce-stock, .add-stock {
+    height: fit-content;
+}
+
+.curr-stock {
+    width: 15px;
+    text-align: center;
+}
+
+.change-stock-price {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dorayaki-total-price {
+    padding-top: 1rem;
+}
+
+.curr-stock {
+    padding: 0 1rem;
+}
+
+.submit-button {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.submit-button #successText {
+    padding-top: 1rem;
+    text-align: center;
+}

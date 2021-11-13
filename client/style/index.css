@@ -1,0 +1,121 @@
+body {
+    margin: 0px;
+    overflow-x: hidden;
+}
+
+h1, 
+h2, 
+h3, 
+p,
+label,
+button,
+input[type='submit'],
+div {
+    margin: 0;
+    font-family: cursive;
+}
+
+input:focus {
+    outline: none;
+}
+
+button:hover,
+input[type='submit'] {
+    cursor: pointer;
+}
+
+.background {
+    background-image: url("https://wwv.yify-magnet.com/uploads/movies/eiga-doraemon-nobita-no-shin-kyoryu-2020-tt10588750/large-screenshot-2.jpg");
+
+    filter: blur(3px);
+    -webkit-filter: blur(3px);
+
+    height: 100vh;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+    opacity : 0.9;
+}
+
+.container-box {
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    font-weight: bold;
+    border: 3px solid black;
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: fit-content;
+    height: fit-content;
+    padding: 20px;
+}
+
+.dorayaki-card {
+    border: 2px solid black;
+    border-radius: 1rem;
+    margin: 2rem;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+    transition: transform 0.5s;
+    height: auto;
+    width: 15rem;
+}
+
+.dorayaki-card:hover {
+    cursor: pointer;
+    transform: translateY(-2%);
+}
+
+.dorayaki-card img {
+    height: 8rem;
+    width: auto;
+}
+
+.dorayaki-card .dorayaki-name {
+    margin: 1rem 0;
+}
+
+.dorayaki-desc {
+    margin-bottom: 1rem;
+}
+
+#header {
+    display: flex;
+    height: fit-content;
+    align-items: center;
+}
+
+#header .search-bar {
+    width : 73vw;
+}
+
+#header #searchDorayaki {
+    width : 400px;
+}
+
+#header button {
+    margin: 0 0.5rem;
+}
+
+#header input[type='submit'] {
+    width: fit-content;
+    border: 1px solid black;
+}
+
+#username {
+    margin-left: 90vw;
+    margin-top: 6vh;
+    text-align: center;
+}

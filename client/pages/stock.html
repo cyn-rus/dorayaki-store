@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="./components/dorayaki.ico">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+    <link rel="stylesheet" href="../style/index.css">
+    <link rel="stylesheet" href="../style/stock.css">
+    
+    <script src='../script/helper.js' defer></script>
+    <script src='../components/header.js' defer></script>
+    <script src='../script/stock.js' defer></script>
+    <script src='../script/index.js' defer></script>
+
+</head>
+<body>
+    <div id='header'></div>
+    <div class='background'></div>
+    <div id='container' class='container-box stock-container'>
+        <div class='stock-card'>
+            <div class='stock-detail'>
+                <div class='stock-img'>
+                    <img id='stockImg' src="" alt="">
+                </div>
+                <div class='stock-desc'>
+                    <h1 id='dorayakiName' class='dorayaki-name'></h1>
+                    <h2 id='dorayakiPrice' class='dorayaki-price'>Price: <span id='dorayakiPriceSpan'></span></h2>
+                    <h2 class='dorayaki-available-stock'>Available Stock: <span id='dorayakiAvailableStock'></span></h2>
+                </div>
+            </div>
+            <div class='change-stock-detail'>
+                <div class='change-stock-buttons'>
+                    <h2 id='changeStockText' class='change-stock-text'></h2>
+                    <div class='buttons'>
+                        <button id='reduceStock' class='reduce-stock'>-</button>
+                        <h3 id='currStock' class='curr-stock'></h3>
+                        <button id='addStock' class='add-stock'>+</button>
+                    </div>
+                </div>
+                <div id='changeStockPrice' class='change-stock-price'>
+                    <h2 class='total-price-text'>Total Price</h2>
+                    <h3 id='dorayakiTotalPrice' class='dorayaki-total-price'></h3>
+                </div>
+            </div>
+        </div>
+        <div class='submit-button'>
+            <button id='submitStock' disabled='true'>Submit</button>
+            <h2 id='successText' style='opacity:0'></h2>
+        </div>
+    </div>
+</body>
+</html>

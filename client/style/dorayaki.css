@@ -1,0 +1,26 @@
+.backButton {
+    width : 70px;
+    margin-top : 5px;
+}
+
+.dorayakiDetailContainer img{
+    height : 15rem;
+    width : auto;
+}
+
+.deleteButton{
+    width : 70px;
+    margin-top : 5px;
+}
+
+
+.changeStockButton{
+    width : 120px;
+    margin-top : 5px;
+}
+
+
+.buyButton{
+    width : 70px;
+    margin-top : 5px;
+}

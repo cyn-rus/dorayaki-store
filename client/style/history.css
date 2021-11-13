@@ -1,0 +1,32 @@
+h1 {
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+body, html {
+    height : 100vh;
+}
+
+.containerHistory {
+    transform: translate(-50%, -55%);
+    margin: 2rem 0;
+    height: 30rem;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+table {
+    height: 25rem;
+    overflow-y: scroll;
+    display: block;
+}
+
+tbody {
+    max-height: 1rem;
+}
+
+table, th, td {
+    border: 1px solid white;
+    border-collapse: collapse;
+    color: white;
+    width : 1000px;
+}

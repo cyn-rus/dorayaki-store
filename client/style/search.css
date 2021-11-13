@@ -1,0 +1,57 @@
+.search-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(5%);
+}
+
+.search-container .search-bar {
+    padding-top: 3rem;
+}
+
+.no-result {
+    color: white;
+}
+
+#searchDorayakiPage {
+    font-size: 1.2rem;
+}
+
+#searchResult {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.pagination-menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.pagination-menu button {
+    margin: 0 0.2rem;
+    font-size: 1rem;
+}
+
+.pagination-menu > button {
+    margin: 0 0.5rem;
+}
+
+.select-pagination {
+    display: flex;
+    flex-direction: row;
+}
+
+.page-of-text {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+}

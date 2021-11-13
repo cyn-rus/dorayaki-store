@@ -1,0 +1,21 @@
+.dorayaki-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(10%);
+    height: auto;
+    box-sizing: border-box;
+}
+
+#username{
+    position: absolute;
+    right: 80;
+    top: 0;
+    font-family: cursive;
+}

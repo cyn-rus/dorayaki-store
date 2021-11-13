@@ -1,0 +1,45 @@
+<!-- cuman admin doang -->
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <link rel="icon" href="./components/dorayaki.ico">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Add Dorayaki | Mahi Mahi</title> 
+
+    <link rel="stylesheet" href="../style/index.css">
+    <link rel="stylesheet" href="../style/add.css">
+
+    <script src='../script/helper.js' defer></script>
+    <script src='../components/header.js' defer></script>
+    <script src='../script/index.js' defer></script>
+
+</head>
+<body>
+    <div id='header'></div>
+    <div class='background'></div>
+    <div id="containerAdd" class='container-box containerAdd'>
+        <div id="leftContainer" class="leftContainer">
+            <img src='../../db/images/doraemon-Dorayaki-removebg-preview.png' />
+        </div>
+        <div id="rightContainer" class="rightContainer">
+            <h1>Add Dorayaki</h1>
+            <form action="../../server/addDorayaki.php" method="post" id="formAddDorayaki" name="formAddDorayaki" enctype="multipart/form-data">
+                <label for="dorayakiName">Dorayaki name : </label><br>
+                <input type="text" id="inputDorayakiName" name="inputDorayakiName"><br>
+                <label for="dorayakiDescription">Dorayaki description : </label><br>
+                <input type="text" id="inputDorayakiDescription" name="inputDorayakiDescription"><br>
+                <label for="dorayakiImage">Dorayaki image : </label><br>
+                <input type="file" id="inputDorayakiImage" name="uploadfile"></input><br>
+                <label for="dorayakiPrice">Dorayaki price : </label><br>
+                <input type="number" id="inputDorayakiPrice" name="inputDorayakiPrice"></input><br>
+                <label for="dorayakiStock">Dorayaki stock : </label><br>
+                <input type="number" id="inputDorayakiStock" name="inputDorayakiStock"></br>
+                <input type="submit" class="submitButton" name="submit">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

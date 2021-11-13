@@ -1,0 +1,25 @@
+body, html {
+    height : 100vh;
+    overflow-y: hidden;
+}
+
+h1 {
+    margin : 10px 0;
+    text-align: center;
+    margin-bottom : 20px;
+}
+
+.registerContainer {
+    text-align: center;
+}
+
+input {
+    margin : 5px;
+    width :300px;
+    border: 2px solid black;
+}
+
+.submitButton {
+    width : 70px;
+    margin-top : 5px;
+}

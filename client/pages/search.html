@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="./components/dorayaki.ico">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Search | Mahi Mahi</title>
+
+    <link rel="stylesheet" href="../style/index.css">
+    <link rel="stylesheet" href="../style/search.css">
+
+    
+    <script src='../script/helper.js' defer></script>
+    <script src='../components/header.js' defer></script>
+    <script src='../components/dorayakiCard.js' defer></script>
+    <script src='../script/search.js' defer></script>
+    <script src='../script/index.js' defer></script>
+
+</head>
+<body>
+    <div id='header'></div>
+    <div class='background'></div>
+    <div id='container' class='search-container'>
+        <div class='search-bar'>
+            <form>
+                <input type="text" id='searchDorayakiPage' name='q' placeholder="Search">
+            </form>
+        </div>
+        <div id='searchResult'></div>
+        <div class='pagination-menu' id='paginationMenu'>
+            <button id='previousButton'>←</button>
+            <div id='selectPagination' class='select-pagination'></div>
+            <button id='nextButton'>→</button>
+        </div>
+        <p class='page-of-text'>Page of: <span id='currPage'></span> / <span id='totalPages'></span></p>
+    </div>
+</body>
+</html>

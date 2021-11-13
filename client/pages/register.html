@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <link rel="icon" href="../components/dorayaki.ico">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Register | Mahi Mahi</title>
+
+    <link rel="stylesheet" href="../style/index.css"></link>
+    <link rel="stylesheet" href="../style/register.css"></link>
+
+    <script src="../script/helper.js" defer></script>
+    <script src="../script/register.js" defer></script>
+    <script src='../script/index.js' defer></script>
+</head>
+<body>
+    <div class="background"></div>
+    <div id="registerContainer" class="container-box registerContainer" name="registerContainer">
+        <h1> Register </h1>
+        <form action="../../server/register.php" method="post" class="formRegister" id="formRegister">
+            <label for="labelEmail">Email</label><br>
+            <input type="text" id="inputEmail" name="inputEmail">
+            <p id='validity' class='validity' style='opacity:0'>Email invalid</p>
+            <br>
+
+            <label for="labelUsername">Username</label>
+            <br>
+            <input type="text" id="inputUsername" class="inputUsername" name="inputUsername">
+            <p id="status" name="status" style='opacity:0'>Username invalid</p>
+            <br>
+            
+            <label for="labelPassword">Password</label>
+            <br>
+            <input type="password" id="inputPassword" name="inputPassword">
+            <br>
+            
+            <input type="submit" name="submit" class='submitButton'>
+        </form>
+        <a href='login.html'><button>Login</button></a>
+    </div>
+</body>
+</html>

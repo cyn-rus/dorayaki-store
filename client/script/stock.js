@@ -109,6 +109,7 @@ async function renderStock(dorayakiID) {
                 currStock = 0
                 dorayakiCurrentStock.innerHTML = currStock
                 reduceButton.disabled = true
+                document.getElementById('dorayakiTotalPrice').innerHTML = 0
             }
 
             dorayakiAvailableStock.innerHTML = availableStock

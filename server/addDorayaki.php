@@ -4,7 +4,18 @@
         $dorayakiDescription = $_REQUEST['inputDorayakiDescription'];
         $dorayakiPrice = $_REQUEST['inputDorayakiPrice'];
         $dorayakiStock = $_REQUEST['inputDorayakiStock'];
+        
+        $serverIP = $_SERVER['HTTP_CLIENT_IP'];
+        $timestamp = CURRENT_TIMESTAMP;
 
+        $body = array('request_name' => 'a', 'nama_dorayaki' => $dorayakiName, 'jumlah' => $dorayakiStock, 'ip' => $serverIP, 'endpoint' => 'a', 'timestamp' => $timestamp);
+        $soapRes = $soapClient->addRequest($body);
+
+        if (extension_loaded('soap')) {
+            header('Location: ../client/pages/dashboard.html');
+        } else {
+            header('Location: ../client/pages/add.html');
+        }
         $db = new SQLite3('../db/doraemonangis.sq3');
 
         if(!$db) {

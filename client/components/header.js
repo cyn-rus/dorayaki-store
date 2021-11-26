@@ -7,7 +7,8 @@ function renderHeader() {
                     </div>`
         
     if (isAdmin === "1"){
-        child += `<button class="button" onclick="window.location.href='add.html'">Add Dorayaki Variant</button>`
+        child += `<button class="button" onclick="window.location.href='add.html'">Add Dorayaki Variant</button>
+        <button class="button" onclick="window.location.href='reqStatus.html'">Dorayaki Request Status</button>`
     }
 
     child += `

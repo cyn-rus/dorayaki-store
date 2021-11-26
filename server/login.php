@@ -40,8 +40,9 @@
         $cookie_value = $_REQUEST['inputUsername'];
         setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");
         
-        $sql2 = "SELECT * FROM users WHERE username='" . $username . "' AND isadmin=1";
-        $result2 = $db->query($sql2);
+        $sql2 = $db->prepare("SELECT * FROM users WHERE username=:username AND isadmin=1");
+        $sql2->bindParam(':username', $username);
+        $result2 = $sql2->execute();
 
         $found2 = 0;
 

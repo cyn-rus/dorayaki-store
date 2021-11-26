@@ -73,7 +73,7 @@ async function renderStock(dorayakiID) {
     if (isAdmin === '1') {
         document.getElementById('dorayakiPrice').style.display = 'none'
         document.getElementById('changeStockPrice').style.display = 'none'
-        successText.innerHTML = 'Stock changed successfully!'
+        successText.innerHTML = 'Request sent successfully!'
     } else {
         document.getElementById('dorayakiPriceSpan').innerHTML = dorayaki.price
         document.getElementById('dorayakiTotalPrice').innerHTML = dorayaki.price * currStock
@@ -116,7 +116,7 @@ async function renderStock(dorayakiID) {
             submitButton.disabled = true
         } catch(err) {
             successText.style.opacity = 1
-            successText.innerHTML = isAdmin === '1' ? 'Dorayaki stock not successfully changed!' : 'Dorayaki not bought successfully!'
+            successText.innerHTML = isAdmin === '1' ? 'Dorayaki stock changes not successfully requsted!' : 'Dorayaki not bought successfully!'
         }
     }
 }

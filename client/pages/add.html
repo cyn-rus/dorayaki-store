@@ -14,6 +14,7 @@
 
     <script src='../script/helper.js' defer></script>
     <script src='../components/header.js' defer></script>
+    <script src='../script/add.js' defer></script>
     <script src='../script/index.js' defer></script>
 
 </head>
@@ -28,7 +29,7 @@
             <h1>Add Dorayaki</h1>
             <form action="../../server/addDorayaki.php" method="post" id="formAddDorayaki" name="formAddDorayaki" enctype="multipart/form-data">
                 <label for="dorayakiName">Dorayaki name : </label><br>
-                <input type="text" id="inputDorayakiName" name="inputDorayakiName"><br>
+                <select type="text" id="inputDorayakiName" name="inputDorayakiName"></select><br>
                 <label for="dorayakiDescription">Dorayaki description : </label><br>
                 <input type="text" id="inputDorayakiDescription" name="inputDorayakiDescription"><br>
                 <label for="dorayakiImage">Dorayaki image : </label><br>

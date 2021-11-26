@@ -93,16 +93,20 @@ async function renderStock(dorayakiID) {
     submitButton.onclick = async function() {
         try {
             const changedStock = Math.abs(availableStock - currStock)
+            let type = ''
+            if (currStock > availableStock) type = 'add'
+            else type = 'reduce'
             const endpoint = isAdmin === '1' ? `changeStock.php?name=${dorayaki.name}&stock=${changedStock}&type=${currStock > availableStock ? 'add' : 'reduce'}` : `buyDorayaki.php?name=${dorayaki.name}&stock=${changedStock}`
 
             await fetchDatas(endpoint)
                 .then(data => {
+                    console.log(data);
                     return JSON.parse(data)
                 })
            
             successText.style.opacity = 1
             
-            if (isAdmin === '1') {
+            if (isAdmin === '1' && type === 'reduce') {
                 availableStock = currStock
             } else {
                 availableStock -= currStock
@@ -112,11 +116,11 @@ async function renderStock(dorayakiID) {
                 document.getElementById('dorayakiTotalPrice').innerHTML = 0
             }
 
-            dorayakiAvailableStock.innerHTML = availableStock
             submitButton.disabled = true
         } catch(err) {
+            console.log(err);
             successText.style.opacity = 1
-            successText.innerHTML = isAdmin === '1' ? 'Dorayaki stock changes not successfully requsted!' : 'Dorayaki not bought successfully!'
+            successText.innerHTML = isAdmin === '1' ? 'Dorayaki stock changes not successfully requested!' : 'Dorayaki not bought successfully!'
         }
     }
 }

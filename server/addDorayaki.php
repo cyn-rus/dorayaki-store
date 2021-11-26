@@ -3,19 +3,21 @@
         $dorayakiName = $_REQUEST['inputDorayakiName'];
         $dorayakiDescription = $_REQUEST['inputDorayakiDescription'];
         $dorayakiPrice = $_REQUEST['inputDorayakiPrice'];
-        $dorayakiStock = $_REQUEST['inputDorayakiStock'];
+        $dorayakiStock = 1;
         
-        $serverIP = $_SERVER['HTTP_CLIENT_IP'];
-        $timestamp = CURRENT_TIMESTAMP;
+        // header('Location: ../client/pages/history.html');
+        
+        // $serverIP = $_SERVER['HTTP_CLIENT_IP'];
+        // $timestamp = CURRENT_TIMESTAMP;
 
-        $body = array('request_name' => 'a', 'nama_dorayaki' => $dorayakiName, 'jumlah' => $dorayakiStock, 'ip' => $serverIP, 'endpoint' => 'a', 'timestamp' => $timestamp);
-        $soapRes = $soapClient->addRequest($body);
+        // $body = array('request_name' => 'a', 'nama_dorayaki' => $dorayakiName, 'jumlah' => $dorayakiStock, 'ip' => $serverIP, 'endpoint' => 'a', 'timestamp' => $timestamp);
+        // $soapRes = $soapClient->addRequest($body);
 
-        if (extension_loaded('soap')) {
-            header('Location: ../client/pages/dashboard.html');
-        } else {
-            header('Location: ../client/pages/add.html');
-        }
+        // if (extension_loaded('soap')) {
+        //     header('Location: ../client/pages/dashboard.html');
+        // } else {
+        //     header('Location: ../client/pages/add.html');
+        // }
         $db = new SQLite3('../db/doraemonangis.sq3');
 
         if(!$db) {
@@ -35,7 +37,7 @@
 
         if (!empty($dorayakiName) and !empty($dorayakiDescription) and !empty($dorayakiPrice) and !empty($dorayakiStock) and !empty($filename)) {
             if (move_uploaded_file($tempname, $folder)) {
-                $sql = "INSERT INTO dorayakis VALUES('$dorayakiId','" . $dorayakiName . "','" . $dorayakiDescription . "','" . $filename . "'," . $dorayakiPrice . "," . $dorayakiStock . ");";
+                $sql = "INSERT INTO dorayakis VALUES('" . $dorayakiId . "','" . $dorayakiName . "','" . $dorayakiDescription . "','" . $filename . "'," . $dorayakiPrice . "," . $dorayakiStock . ");";
 
                 $ret = $db->exec($sql);
 

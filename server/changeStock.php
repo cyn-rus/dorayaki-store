@@ -8,12 +8,10 @@
     $db = new SQLite3('../db/doraemonangis.sq3');
 
     if ($isAdmin == '1' and $type == 'add') {
-        $sqlRequest = "INSERT INTO requests VALUES(".$body['request_name'].", 320)";
-        $ret = $db->exec($sqlRequest)
         $soapClient = new SoapClient('http://localhost:9999/dorayaki_supplier/dorayakiAddStock?wsdl');
 
-        $serverIP = $_SERVER['HTTP_CLIENT_IP'];
-        $timestamp = CURRENT_TIMESTAMP;
+        $serverIP = $_SERVER['REMOTE_ADDR'];
+        $timestamp = date("F j, Y, g:i a");
 
         $body = array('request_name' => 'b', 'nama_dorayaki' => $dorayaki, 'jumlah' => $changed_stock, 'ip' => $serverIP, 'endpoint' => 'a', 'timestamp' => $timestamp);
         $soapRes = $soapClient->addRequest($body);
@@ -21,7 +19,7 @@
         $sqlModify = "INSERT INTO modifies VALUES(CURRENT_TIMESTAMP, '" . $_COOKIE['username'] . "', '" . $dorayaki . "', '" . $changed_stock . "', '" . $type . "')";
         $ret2 = $db->exec($sqlModify);
 
-        if ($ret2 and $ret) {
+        if ($ret2) {
             echo json_encode(['changed' => 1]);
         } else {
             echo json_encode(['changed' => 2]);
@@ -54,7 +52,7 @@
         if ($ret and $ret2 and $ret3) {
             echo json_encode(['changed' => 1]);
         } else {
-            echo_json_encode(['changed' => 2]);
+            echo json_encode(['changed' => 2]);
         }
     } 
 ?>
